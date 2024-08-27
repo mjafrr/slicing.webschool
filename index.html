@@ -3,20 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web School</title>
-    <link rel="stylesheet" href="/src/output.css" />
+    <title>Document</title>
   </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Web School</title>
+        <link rel="stylesheet" href="/src/output.css" />
+      </head>
 
-  <body class="bg-white text-gray-900">
-    <!-- Navbar -->
-    <nav
-      class="transition-colors duration-500 bg-transparent fixed w-full z-10 top-0"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-          <div class="flex">
-            <a href="#" class="flex-shrink-0 flex items-center">
-              <!-- <div class="bg-slate-100 rounded-md p-1">
+      <body class="bg-white text-gray-900">
+        <!-- Navbar -->
+        <nav
+          class="transition-colors duration-500 bg-transparent fixed w-full z-10 top-0"
+        >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+              <div class="flex">
+                <a href="#" class="flex-shrink-0 flex items-center">
+                  <!-- <div class="bg-slate-100 rounded-md p-1">
                 <img
                   class="h-8 w-fit"
                   src="/img/Logo-HSI-IDN-fix-2.png"
@@ -24,377 +32,255 @@
                 />
               </div> -->
 
-              <span class="ml-2 font-semibold text-white text-lg"
-                >SMAIT HSI-IDN</span
-              >
-            </a>
+                  <span class="ml-2 font-semibold text-white text-lg"
+                    >SMAIT HSI-IDN</span
+                  >
+                </a>
 
-            <div
-              class="hidden md:flex md:items-center md:space-x-4 ml-10 group"
-            >
-              <a href="#" class="nav-link text-white text-sm font-medium"
-                >Home</a
+                <div
+                  class="hidden md:flex md:items-center md:space-x-4 ml-10 group"
+                >
+                  <a href="#" class="nav-link text-white text-sm font-medium"
+                    >Home</a
+                  >
+                  <a href="#" class="nav-link text-white text-sm font-medium"
+                    >Tour</a
+                  >
+                  <a href="#" class="nav-link text-white text-sm font-medium"
+                    >Destination</a
+                  >
+                  <a href="#" class="nav-link text-white text-sm font-medium"
+                    >Activities</a
+                  >
+                  <a href="#" class="nav-link text-white text-sm font-medium"
+                    >Pages</a
+                  >
+                  <a href="#" class="nav-link text-white text-sm font-medium"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+              <div class="hidden md:flex md:items-center space-x-4">
+                <a href="#" class="text-white text-sm">USD</a>
+                <a href="#" class="text-white text-sm">Sign up</a>
+                <button
+                  href="#"
+                  class="bg-white ring-1 ring-slate-400 text-gray-800 text-sm px-4 py-2 rounded-full hover:bg-transparent duration-200 hover:ring-white hover:text-white"
+                >
+                  Log in
+                </button>
+              </div>
+              <!-- Mobile menu button -->
+              <div
+                onclick="
+          openNavbar()"
+                class="md:hidden flex items-center group"
               >
-              <a href="#" class="nav-link text-white text-sm font-medium"
-                >Tour</a
-              >
-              <a href="#" class="nav-link text-white text-sm font-medium"
-                >Destination</a
-              >
-              <a href="#" class="nav-link text-white text-sm font-medium"
-                >Activities</a
-              >
-              <a href="#" class="nav-link text-white text-sm font-medium"
-                >Pages</a
-              >
-              <a href="#" class="nav-link text-white text-sm font-medium"
-                >Contact</a
-              >
+                <button
+                  id="mobile-menu-button"
+                  class="text-white focus:outline-none hover:bg-none hover:border-white"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16m-7 6h7"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-          <div class="hidden md:flex md:items-center space-x-4">
-            <a href="#" class="text-white text-sm">USD</a>
-            <a href="#" class="text-white text-sm">Sign up</a>
-            <button
-              href="#"
-              class="bg-white ring-1 ring-slate-400 text-gray-800 text-sm px-4 py-2 rounded-full hover:bg-transparent duration-200 hover:ring-white hover:text-white"
-            >
-              Log in
-            </button>
-          </div>
-          <!-- Mobile menu button -->
-          <div
-            onclick="
-          openNavbar()"
-            class="md:hidden flex items-center group"
-          >
-            <button
-              id="mobile-menu-button"
-              class="text-white focus:outline-none hover:bg-none hover:border-white"
-            >
+        </nav>
+
+        <!-- Mobile menu -->
+        <aside
+          id="mobile-menu"
+          class="w-full h-screen bg-slate-700 bg-opacity-80 z-50 fixed md:hidden transition-all duration-200 ease-in-out translate-x-full"
+        >
+          <div class="w-full h-16 relative mb-4">
+            <button onclick="closeNavbar()">
               <svg
-                class="h-6 w-6"
+                class="absolute right-0 mr-4"
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                width="32"
+                height="32"
+                fill="#ffffff"
+                viewBox="0 0 256 256"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
+                  d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+                ></path>
               </svg>
             </button>
           </div>
-        </div>
-      </div>
-    </nav>
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+            <a
+              href="#"
+              class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+              >Tour</a
+            >
+            <a
+              href="#"
+              class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+              >Destination</a
+            >
+            <a
+              href="#"
+              class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+              >Activities</a
+            >
+            <a
+              href="#"
+              class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+              >Pages</a
+            >
+            <a
+              href="#"
+              class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+              >Contact</a
+            >
+            <a
+              href="#"
+              class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+              >USD</a
+            >
+            <a
+              href="#"
+              class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+              >Sign up</a
+            >
+            <a
+              href="#"
+              class="w-fit mx-auto bg-white text-gray-800 block text-center text-base font-medium px-3 py-2 rounded-full"
+              >Log in</a
+            >
+          </div>
+        </aside>
 
-    <!-- Mobile menu -->
-    <aside
-      id="mobile-menu"
-      class="w-full h-screen bg-slate-700 bg-opacity-80 z-50 fixed md:hidden transition-all duration-200 ease-in-out translate-x-full"
-    >
-      <div class="w-full h-16 relative mb-4">
-        <button onclick="closeNavbar()">
-          <svg
-            class="absolute right-0 mr-4"
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill="#ffffff"
-            viewBox="0 0 256 256"
-          >
-            <path
-              d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
-            ></path>
-          </svg>
-        </button>
-      </div>
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
-        <a
-          href="#"
-          class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
-          >Home</a
+        <!-- Hero Section -->
+        <section
+          class="bg-cover bg-center h-screen text-white text-center"
+          style="background-image: url(/img/home1.jpg)"
         >
-        <a
-          href="#"
-          class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
-          >Tour</a
-        >
-        <a
-          href="#"
-          class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
-          >Destination</a
-        >
-        <a
-          href="#"
-          class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
-          >Activities</a
-        >
-        <a
-          href="#"
-          class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
-          >Pages</a
-        >
-        <a
-          href="#"
-          class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
-          >Contact</a
-        >
-        <a
-          href="#"
-          class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
-          >USD</a
-        >
-        <a
-          href="#"
-          class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
-          >Sign up</a
-        >
-        <a
-          href="#"
-          class="w-fit mx-auto bg-white text-gray-800 block text-center text-base font-medium px-3 py-2 rounded-full"
-          >Log in</a
-        >
-      </div>
-    </aside>
-
-    <!-- Hero Section -->
-    <section
-      class="bg-cover bg-center h-screen text-white text-center"
-      style="background-image: url(/img/home1.jpg)"
-    >
-      <div
-        class="flex items-center justify-center h-full bg-black bg-opacity-50 px-4"
-      >
-        <h1 class="text-5xl font-semibold">Welcome To SMA IT HSI-IDN</h1>
-      </div>
-    </section>
-
-    <div class="container px-4 mx-auto">
-      <!-- Destination Section -->
-      <section class="py-16 bg-gray-50 px-4">
-        <div class="container mx-auto">
-          <h2 class="text-3xl font-bold text-center mb-8">
-            Have Best of Place
-          </h2>
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-6"
+            class="flex items-center justify-center h-full bg-black bg-opacity-50 px-4"
           >
-            <!-- Repeat this block for each destination -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img
-                src="https://via.placeholder.com/300x200"
-                alt="Destination"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4">
-                <h3 class="text-xl font-semibold">Destination Name</h3>
-                <p class="text-gray-600">
-                  Brief description of the destination.
-                </p>
-              </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img
-                src="https://via.placeholder.com/300x200"
-                alt="Destination"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4">
-                <h3 class="text-xl font-semibold">Destination Name</h3>
-                <p class="text-gray-600">
-                  Brief description of the destination.
-                </p>
-              </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img
-                src="https://via.placeholder.com/300x200"
-                alt="Destination"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4">
-                <h3 class="text-xl font-semibold">Destination Name</h3>
-                <p class="text-gray-600">
-                  Brief description of the destination.
-                </p>
-              </div>
-            </div>
-            <!-- End of block -->
+            <h1 class="text-5xl font-semibold">Welcome To SMA IT HSI-IDN</h1>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Package Section -->
-      <section class="py-16 bg-white">
-        <div class="container mx-auto">
-          <h2 class="text-3xl font-bold text-center mb-8">
-            Some Activities Here
-          </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <!-- Repeat this block for each package -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img
-                src="https://via.placeholder.com/300x200"
-                alt="Package"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4">
-                <h3 class="text-xl font-semibold">Package Name</h3>
-                <p class="text-gray-600">Brief description of the package.</p>
-                <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
-                  See Activities
-                </button>
+        <div class="container px-4 mx-auto">
+          <!-- Destination Section -->
+          <section class="py-16 bg-gray-50 px-4">
+            <div class="container mx-auto">
+              <h2 class="text-3xl font-bold text-center mb-8">
+                Have Best of Place
+              </h2>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-6"
+              >
+                <!-- Repeat this block for each destination -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img
+                    src="https://via.placeholder.com/300x200"
+                    alt="Destination"
+                    class="w-full h-48 object-cover"
+                  />
+                  <div class="p-4">
+                    <h3 class="text-xl font-semibold">Destination Name</h3>
+                    <p class="text-gray-600">
+                      Brief description of the destination.
+                    </p>
+                  </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img
+                    src="https://via.placeholder.com/300x200"
+                    alt="Destination"
+                    class="w-full h-48 object-cover"
+                  />
+                  <div class="p-4">
+                    <h3 class="text-xl font-semibold">Destination Name</h3>
+                    <p class="text-gray-600">
+                      Brief description of the destination.
+                    </p>
+                  </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img
+                    src="https://via.placeholder.com/300x200"
+                    alt="Destination"
+                    class="w-full h-48 object-cover"
+                  />
+                  <div class="p-4">
+                    <h3 class="text-xl font-semibold">Destination Name</h3>
+                    <p class="text-gray-600">
+                      Brief description of the destination.
+                    </p>
+                  </div>
+                </div>
+                <!-- End of block -->
               </div>
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img
-                src="https://via.placeholder.com/300x200"
-                alt="Package"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4">
-                <h3 class="text-xl font-semibold">Package Name</h3>
-                <p class="text-gray-600">Brief description of the package.</p>
-                <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
-                  See Activities
-                </button>
-              </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img
-                src="https://via.placeholder.com/300x200"
-                alt="Package"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4">
-                <h3 class="text-xl font-semibold">Package Name</h3>
-                <p class="text-gray-600">Brief description of the package.</p>
-                <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
-                  See Activities
-                </button>
-              </div>
-            </div>
-            <!-- End of block -->
-          </div>
+          </section>
         </div>
-      </section>
-
-      <!-- Statistics Section -->
-      <section class="py-16 bg-gray-50">
-        <div class="container mx-auto text-center">
-          <h2 class="text-3xl font-bold mb-8">Why In SMA IT HSI-IDN?</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            <div>
-              <p class="text-5xl font-bold">60+</p>
-              <p class="text-gray-600">Students</p>
-            </div>
-            <div>
-              <p class="text-5xl font-bold">10+</p>
-              <p class="text-gray-600">Lessons</p>
-            </div>
-            <div>
-              <p class="text-5xl font-bold">1M+</p>
-              <p class="text-gray-600">Happy Customers</p>
-            </div>
-            <div>
-              <p class="text-5xl font-bold">24/7</p>
-              <p class="text-gray-600">Support</p>
+        <footer class="py-8 bg-gray-800 text-white">
+          <div
+            class="container mx-auto flex flex-col sm:flex-row justify-between items-center"
+          >
+            <p>&copy; 2024 Travel Agency. All rights reserved.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white">Facebook</a>
+              <a href="#" class="text-white">Twitter</a>
+              <a href="#" class="text-white">Instagram</a>
             </div>
           </div>
-        </div>
-      </section>
+        </footer>
 
-      <!-- Testimonial Section -->
-      <section class="py-16 bg-white">
-        <div class="container mx-auto text-center">
-          <h2 class="text-3xl font-bold mb-8">What Our Santri Say?</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <!-- Repeat this block for each testimonial -->
-            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-              <img
-                src="path/to/profile1.jpg"
-                alt="Profile 1"
-                class="w-16 h-16 rounded-full mx-auto mb-4"
-              />
-              <p class="text-gray-600 mb-4">"Testimonial text goes here."</p>
-              <p class="font-semibold">- Customer Name 1</p>
-            </div>
-            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-              <img
-                src="path/to/profile2.jpg"
-                alt="Profile 2"
-                class="w-16 h-16 rounded-full mx-auto mb-4"
-              />
-              <p class="text-gray-600 mb-4">
-                "Another testimonial text goes here."
-              </p>
-              <p class="font-semibold">- Customer Name 2</p>
-            </div>
-            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-              <img
-                src="path/to/profile3.jpg"
-                alt="Profile 3"
-                class="w-16 h-16 rounded-full mx-auto mb-4"
-              />
-              <p class="text-gray-600 mb-4">
-                "Yet another testimonial text goes here."
-              </p>
-              <p class="font-semibold">- Customer Name 3</p>
-            </div>
-            <!-- End of block -->
-          </div>
-        </div>
-      </section>
-    </div>
+        <script>
+          // navbar scroll
+          // Pilih navbar
+          const navbar = document.querySelector("nav");
 
-    <!-- Footer Section -->
-    <footer class="py-8 bg-gray-800 text-white">
-      <div
-        class="container mx-auto flex flex-col sm:flex-row justify-between items-center"
-      >
-        <p>&copy; 2024 Travel Agency. All rights reserved.</p>
-        <div class="flex space-x-4">
-          <a href="#" class="text-white">Facebook</a>
-          <a href="#" class="text-white">Twitter</a>
-          <a href="#" class="text-white">Instagram</a>
-        </div>
-      </div>
-    </footer>
+          // Fungsi untuk mengubah background navbar saat di-scroll
+          function handleScroll() {
+            if (window.scrollY > 0) {
+              navbar.classList.add("bg-[#1B5BDF]", "shadow-md", "navbar-bg");
+              navbar.classList.remove("bg-transparent");
+            } else {
+              navbar.classList.add("bg-transparent");
+              navbar.classList.remove("bg-[#1B5BDF]", "shadow-md", "navbar-bg");
+            }
+          }
 
-    <script>
-      // navbar scroll
-      // Pilih navbar
-      const navbar = document.querySelector("nav");
+          // Tambahkan event listener untuk scroll
+          window.addEventListener("scroll", handleScroll);
 
-      // Fungsi untuk mengubah background navbar saat di-scroll
-      function handleScroll() {
-        if (window.scrollY > 0) {
-          navbar.classList.add("bg-[#1B5BDF]", "shadow-md", "navbar-bg");
-          navbar.classList.remove("bg-transparent");
-        } else {
-          navbar.classList.add("bg-transparent");
-          navbar.classList.remove("bg-[#1B5BDF]", "shadow-md", "navbar-bg");
-        }
-      }
+          const sidebar = document.querySelector("aside");
 
-      // Tambahkan event listener untuk scroll
-      window.addEventListener("scroll", handleScroll);
-
-      const sidebar = document.querySelector("aside");
-
-      function openNavbar() {
-        sidebar.classList.add("translate-x-0");
-        sidebar.classList.remove("translate-x-full");
-      }
-      function closeNavbar() {
-        sidebar.classList.remove("translate-x-0");
-        sidebar.classList.add("translate-x-full");
-      }
-    </script>
+          function openNavbar() {
+            sidebar.classList.add("translate-x-0");
+            sidebar.classList.remove("translate-x-full");
+          }
+          function closeNavbar() {
+            sidebar.classList.remove("translate-x-0");
+            sidebar.classList.add("translate-x-full");
+          }
+        </script>
+      </body>
+    </html>
   </body>
 </html>
