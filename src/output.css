@@ -764,12 +764,12 @@ video {
   margin-right: 1rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .box-border {
@@ -1933,11 +1933,6 @@ video {
   border-style: none;
 }
 
-.border-blue-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(29 78 216 / var(--tw-border-opacity));
-}
-
 .border-slate-700 {
   --tw-border-opacity: 1;
   border-color: rgb(51 65 85 / var(--tw-border-opacity));
@@ -1946,6 +1941,11 @@ video {
 .bg-\[\#1B5BDF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(27 91 223 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#FEF7F4\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 247 244 / var(--tw-bg-opacity));
 }
 
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
@@ -1995,16 +1995,16 @@ video {
   --tw-bg-opacity: 0.8;
 }
 
-.bg-\[url\(\'\/img\/place1\.png\'\)\] {
-  background-image: url('/img/place1.png');
+.bg-\[url\(\'\/img\/activities1\.png\'\)\] {
+  background-image: url('/img/activities1.png');
 }
 
-.bg-\[url\(\'\/img\/place3\.png\'\)\] {
-  background-image: url('/img/place3.png');
+.bg-\[url\(\'\/img\/activities2\.png\'\)\] {
+  background-image: url('/img/activities2.png');
 }
 
-.bg-\[url\(\'\/img\/place2\.png\'\)\] {
-  background-image: url('/img/place2.png');
+.bg-\[url\(\'\/img\/activities3\.png\'\)\] {
+  background-image: url('/img/activities3.png');
 }
 
 .decoration-slice {
@@ -2281,12 +2281,12 @@ video {
   font-weight: 700;
 }
 
-.font-light {
-  font-weight: 300;
-}
-
 .font-medium {
   font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .font-semibold {
@@ -2840,18 +2840,9 @@ video {
   }
 }
 
-.hover\:border:hover {
-  border-width: 1px;
-}
-
 .hover\:border-white:hover {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.hover\:bg-blue-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-slate-400:hover {
@@ -2964,21 +2955,6 @@ video {
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark\:text-blue-500 {
-    --tw-text-opacity: 1;
-    color: rgb(59 130 246 / var(--tw-text-opacity));
-  }
-
-  .dark\:hover\:bg-blue-500:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-  }
-
-  .dark\:hover\:text-white:hover {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
   @media (min-width: 1024px) {
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
       paint-order: markers;
