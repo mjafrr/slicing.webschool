@@ -2007,6 +2007,30 @@ video {
   background-image: url('/img/activities3.png');
 }
 
+.bg-\[url\(\'\.\.\/img\/place1\.png\'\)\] {
+  background-image: url('../img/place1.png');
+}
+
+.bg-\[url\(\'\.\.\/img\/place2\.png\'\)\] {
+  background-image: url('../img/place2.png');
+}
+
+.bg-\[url\(\'\.\.\/img\/place3\.png\'\)\] {
+  background-image: url('../img/place3.png');
+}
+
+.bg-\[url\(\'\/img\/place1\.png\'\)\] {
+  background-image: url('/img/place1.png');
+}
+
+.bg-\[url\(\'\/img\/place2\.png\'\)\] {
+  background-image: url('/img/place2.png');
+}
+
+.bg-\[url\(\'\/img\/place3\.png\'\)\] {
+  background-image: url('/img/place3.png');
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
