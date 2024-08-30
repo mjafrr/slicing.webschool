@@ -33,7 +33,7 @@
                 />
               </div> -->
 
-                  <span class="ml-2 font-semibold text-white text-lg"
+                  <span class="ml-2 font-semibold text-white text-lg group"
                     >SMAIT HSI-IDN</span
                   >
                 </a>
@@ -41,29 +41,49 @@
                 <div
                   class="hidden md:flex md:items-center md:space-x-4 ml-10 group"
                 >
-                  <a href="#" class="nav-link text-white text-sm font-medium"
+                  <a
+                    href="#"
+                    class="nav-link text-white text-sm font-medium hover:border-b-2 hover:border-b-white transition-all duration-100"
                     >Home</a
                   >
-                  <a href="#" class="nav-link text-white text-sm font-medium"
+                  <a
+                    href="#"
+                    class="nav-link text-white text-sm font-medium hover:border-b-2 hover:border-b-white transition-all duration-100"
                     >Tour</a
                   >
-                  <a href="#" class="nav-link text-white text-sm font-medium"
+                  <a
+                    href="#"
+                    class="nav-link text-white text-sm font-medium hover:border-b-2 hover:border-b-white transition-all duration-100"
                     >Destination</a
                   >
-                  <a href="#" class="nav-link text-white text-sm font-medium"
+                  <a
+                    href="#"
+                    class="nav-link text-white text-sm font-medium hover:border-b-2 hover:border-b-white transition-all duration-100"
                     >Activities</a
                   >
-                  <a href="#" class="nav-link text-white text-sm font-medium"
+                  <a
+                    href="#"
+                    class="nav-link text-white text-sm font-medium hover:border-b-2 hover:border-b-white transition-all duration-100"
                     >Pages</a
                   >
-                  <a href="#" class="nav-link text-white text-sm font-medium"
+                  <a
+                    href="#"
+                    class="nav-link text-white text-sm font-medium hover:border-b-2 hover:border-b-white transition-all duration-100"
                     >Contact</a
                   >
                 </div>
               </div>
               <div class="hidden md:flex md:items-center space-x-4">
-                <a href="#" class="text-white text-sm">USD</a>
-                <a href="#" class="text-white text-sm">Sign up</a>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:border-b-2 hover:border-b-white transition-all duration-100"
+                  >USD
+                </a>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:border-b-2 hover:border-b-white transition-all duration-100"
+                  >Sign up</a
+                >
                 <button
                   href="#"
                   class="bg-white ring-1 ring-slate-400 text-gray-800 text-sm px-4 py-2 rounded-full hover:bg-transparent duration-200 hover:ring-white hover:text-white"
@@ -163,11 +183,12 @@
               class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
               >Sign up</a
             >
-            <a
+            <button
               href="#"
-              class="w-fit mx-auto bg-white text-gray-800 block text-center text-base font-medium px-3 py-2 rounded-full"
-              >Log in</a
+              class="bg-white ring-1 ring-slate-400 text-gray-800 text-sm px-4 py-2 rounded-full hover:bg-transparent duration-200 hover:ring-white hover:text-white"
             >
+              Log in
+            </button>
           </div>
         </aside>
 
@@ -177,11 +198,17 @@
           style="background-image: url(../img/home1.jpg)"
         >
           <div
-            class="flex items-center justify-center h-full bg-black bg-opacity-50 px-4"
+            class="flex flex-col items-center justify-center h-full bg-black bg-opacity-50 px-4"
           >
             <h1 class="text-5xl font-semibold">
-              Welcome To <span class="bg-[#1B5BDF]"> SMA IT HSI-IDN</span>
+              WELCOME TO <span class="text-[#1B5BDF]"> SMA IT HSI-IDN</span>
             </h1>
+            <button
+              href="#"
+              class="bg-white ring-1 ring-slate-800 text-slate-800 text-sm px-4 py-2 rounded-full hover:bg-transparent duration-200 hover:ring-white hover:text-white mt-4"
+            >
+              SEE PROFILE
+            </button>
           </div>
         </section>
 
@@ -326,11 +353,118 @@
             </div>
           </section>
         </div>
-        <section class="h-screen text-white text-center bg-[#FEF7F4] mt-10">
+        <section class="h-fit text-white text-center bg-[#c9cfff] mt-10">
           <div
-            class="flex items-center justify-center h-full bg-opacity-50 px-4"
+            class="container mx-auto grid flex-col md:flex-row gap-3 px-4 py-8 items-center"
           >
-            <h1 class="text-5xl font-semibold">Welcome To SMA IT HSI-IDN</h1>
+            <div class="title h-full w-full flex flex-col gap-2">
+              <h2 class="text-xl md:text-2xl lg:text-4xl text-white font-bold">
+                Jurusan Di SMA IT HSI - IDN PURWOREJO
+              </h2>
+              <p class="text-xs md:text-sm lg:text-lg text-white font-normal">
+                Ada berbagai pilihan jurusan di SMAIT HSI-IDN
+              </p>
+              <button
+                class="bg-[#EB662B] hover:bg-[#d6551e] transition-all duration-200 text-xs md:text-sm lg:text-lg mt-4 lg:mt-8 text-white rounded-md lg:font-bold py-2 px-4 mx-auto"
+              >
+                SEE ALL
+              </button>
+            </div>
+
+            <div
+              class="flex flex-wrap gap-4 mt-7 justify-center md:grid md:grid-cols-3 lg:gap-x-10"
+            >
+              <div
+                class="flex flex-col w-[170px] lg:w-[200px] lg:h-[190px] bg-white p-4 rounded-lg"
+              >
+                <div
+                  class="w-[43px] h-[43px] bg-[#adb5ff] flex justify-center items-center mx-auto"
+                >
+                  <img src="./image/tkj.png" alt="" />
+                </div>
+                <p
+                  class="text-sm lg:text-lg font-medium lg:font-semibold text-slate-700 mt-3 lg:mt-5"
+                >
+                  Teknik Komputer Dan Jaringan
+                </p>
+                <p class="text-xs font-thin text-slate-700 mt-3">Detail</p>
+              </div>
+              <div
+                class="flex flex-col w-[170px] lg:w-[200px] lg:h-[190px] bg-white p-4 rounded-lg"
+              >
+                <div
+                  class="w-[43px] h-[43px] bg-[#adb5ff] flex justify-center items-center mx-auto"
+                >
+                  <img src="./image/rpl.png" alt="" />
+                </div>
+                <p
+                  class="text-sm lg:text-lg font-medium lg:font-semibold text-slate-700 mt-3 lg:mt-5"
+                >
+                  Rekayasa Perangkat Lunak
+                </p>
+                <p class="text-xs font-thin text-slate-700 mt-3">Detail</p>
+              </div>
+              <div
+                class="flex flex-col w-[170px] lg:w-[200px] lg:h-[190px] bg-white p-4 rounded-lg"
+              >
+                <div
+                  class="w-[43px] h-[43px] bg-[#adb5ff] flex justify-center items-center mx-auto"
+                >
+                  <img src="./image/audio.png" alt="" />
+                </div>
+                <p
+                  class="text-sm lg:text-lg font-medium lg:font-semibold text-slate-700 mt-3 lg:mt-5"
+                >
+                  Photo Dan Videography
+                </p>
+                <p class="text-xs font-thin text-slate-700 mt-3">Detail</p>
+              </div>
+              <div
+                class="flex flex-col w-[170px] lg:w-[200px] lg:h-[190px] bg-white p-4 rounded-lg"
+              >
+                <div
+                  class="w-[43px] h-[43px] bg-[#adb5ff] flex justify-center items-center mx-auto"
+                >
+                  <img src="./image/desain.png" alt="" />
+                </div>
+                <p
+                  class="text-sm lg:text-lg font-medium lg:font-semibold text-slate-700 mt-3 lg:mt-5"
+                >
+                  Desain Komunikasi Visual
+                </p>
+                <p class="text-xs font-thin text-slate-700 mt-3">Detail</p>
+              </div>
+              <div
+                class="flex flex-col w-[170px] lg:w-[200px] lg:h-[190px] bg-white p-4 rounded-lg"
+              >
+                <div
+                  class="w-[43px] h-[43px] bg-[#adb5ff] flex justify-center items-center mx-auto"
+                >
+                  <img src="./image/language.png" alt="" />
+                </div>
+                <p
+                  class="text-sm lg:text-lg font-medium lg:font-semibold text-slate-700 mt-3 lg:mt-5"
+                >
+                  Pendalaman Bahasa
+                </p>
+                <p class="text-xs font-thin text-slate-700 mt-3">Detail</p>
+              </div>
+              <div
+                class="flex flex-col w-[170px] lg:w-[200px] lg:h-[190px] bg-white p-4 rounded-lg"
+              >
+                <div
+                  class="w-[43px] h-[43px] bg-[#adb5ff] flex justify-center items-center mx-auto"
+                >
+                  <img src="./image/robotic.png" alt="" />
+                </div>
+                <p
+                  class="text-sm lg:text-lg font-medium lg:font-semibold text-slate-700 mt-3 lg:mt-5"
+                >
+                  Pembelajaran Robotic
+                </p>
+                <p class="text-xs font-thin text-slate-700 mt-3">Detail</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -353,7 +487,7 @@
           var navbar = document.querySelector("nav");
 
           // Fungsi untuk mengubah background navbar saat di-scroll
-          function handleScroll() {
+          function animasiscroll() {
             if (window.scrollY > 0) {
               navbar.classList.add("bg-[#1B5BDF]", "shadow-md", "navbar-bg");
               navbar.classList.remove("bg-transparent");
@@ -364,7 +498,7 @@
           }
 
           // Tambahkan event listener untuk scroll
-          window.addEventListener("scroll", handleScroll);
+          window.addEventListener("scroll", animasiscroll);
 
           const sidebar = document.querySelector("aside");
 
