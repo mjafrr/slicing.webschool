@@ -760,6 +760,10 @@ video {
   margin-left: 0.5rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .mr-4 {
   margin-right: 1rem;
 }
@@ -770,6 +774,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .mt-3 {
@@ -2041,16 +2049,16 @@ video {
   --tw-bg-opacity: 0.8;
 }
 
-.bg-\[url\(\'\/img\/place1\.png\'\)\] {
-  background-image: url('/img/place1.png');
+.bg-\[url\(\'\/img\/agustusan\.png\'\)\] {
+  background-image: url('/img/agustusan.png');
 }
 
-.bg-\[url\(\'\/img\/place2\.png\'\)\] {
-  background-image: url('/img/place2.png');
+.bg-\[url\(\'\/img\/mission-impossible\.png\'\)\] {
+  background-image: url('/img/mission-impossible.png');
 }
 
-.bg-\[url\(\'\/img\/place3\.png\'\)\] {
-  background-image: url('/img/place3.png');
+.bg-\[url\(\'\/img\/serah-terima\.png\'\)\] {
+  background-image: url('/img/serah-terima.png');
 }
 
 .decoration-slice {
@@ -2144,6 +2152,14 @@ video {
 
 .bg-origin-content {
   background-origin: content-box;
+}
+
+.stroke-white {
+  stroke: #fff;
+}
+
+.stroke-black {
+  stroke: #000;
 }
 
 .object-contain {
@@ -2345,6 +2361,10 @@ video {
   font-weight: 700;
 }
 
+.font-extrabold {
+  font-weight: 800;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -2475,6 +2495,18 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
+}
+
+.text-\[\#\] {
+  color: #;
+}
+
+.text-\[\#1\] {
+  color: #1;
 }
 
 .underline {
