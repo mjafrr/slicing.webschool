@@ -6,39 +6,329 @@
     <title>Profile</title>
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body>
-    <section
-      id="about"
-      class="w-full mt-10 bg-cover bg-center h-screen text-white text-center"
-      style="background-image: url(/img/profile.png)"
-    ></section>
-    <div class="container px-4 mx-auto">
-      <div class="container mx-auto p-4 flex flex-col items-center gap-10">
-        <div class="flex gap-5 lg:gap-7 lg:justify-between">
-          <h3
-            class="text-xl md:text-4xl md:w-[537px] font-bold text-center text-slate-800"
+  <body class="text-slate-700">
+    <!-- Navbar -->
+    <nav
+      class="transition-colors duration-500 bg-transparent backdrop-blur-sm fixed w-full z-10 top-0"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex">
+            <a href="#" class="flex items-center">
+              <!-- <div class="bg-slate-100 rounded-md p-1">
+                <img
+                  class="h-8 w-fit"
+                  src="/img/Logo-HSI-IDN-fix-2.png"
+                  alt="Logo"
+                />
+              </div> -->
+
+              <span class="ml-2 font-semibold text-white text-lg group"
+                >SMAIT HSI-IDN</span
+              >
+            </a>
+
+            <div
+              class="hidden md:flex md:items-center md:space-x-4 ml-10 group"
+            >
+              <a
+                href="#"
+                class="nav-link text-white text-sm font-medium hover:border-b-2 hover:border-b-white transition-all duration-100"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="nav-link text-white text-sm font-medium hover:border-b-2 hover:border-b-white transition-all duration-100"
+                >Tour</a
+              >
+              <a
+                href="#"
+                class="nav-link text-white text-sm font-medium hover:border-b-2 hover:border-b-white transition-all duration-100"
+                >Destination</a
+              >
+              <a
+                href="#"
+                class="nav-link text-white text-sm font-medium hover:border-b-2 hover:border-b-white transition-all duration-100"
+                >Activities</a
+              >
+              <a
+                href="#"
+                class="nav-link text-white text-sm font-medium hover:border-b-2 hover:border-b-white transition-all duration-100"
+                >Pages</a
+              >
+              <a
+                href="#"
+                class="nav-link text-white text-sm font-medium hover:border-b-2 hover:border-b-white transition-all duration-100"
+                >Contact</a
+              >
+            </div>
+          </div>
+          <div class="hidden md:flex md:items-center space-x-4">
+            <a
+              href="#"
+              class="text-white text-sm hover:border-b-2 hover:border-b-white transition-all duration-100"
+              >USD
+            </a>
+            <a
+              href="#"
+              class="text-white text-sm hover:border-b-2 hover:border-b-white transition-all duration-100"
+              >Sign up</a
+            >
+            <button
+              href="#"
+              class="bg-white ring-1 ring-slate-400 text-gray-800 text-sm px-4 py-2 rounded-full hover:bg-transparent duration-200 hover:ring-white hover:text-white"
+            >
+              Log in
+            </button>
+          </div>
+          <!-- Mobile menu button -->
+          <div
+            onclick="
+          openNavbar()"
+            class="md:hidden flex items-center group"
           >
-            PROFIL SMA IT
-            <span class="text-[#362FD9]">HSI - IDN</span> PURWOREJO
-          </h3>
-        </div>
-        <div class="flex flex-col md:w-[520px] lg:gap-5 mt-5">
-          <p class="text-xs lg:text-lg text-slate-700 text-center">
-            sekolah adalah tempat mencetak penerus bangsa yang berkualitas dan
-            berprestasi di segala bidang yang dapat bersaing di dunia
-            internasional
-          </p>
-          <p class="text-xs lg:text-lg mt-2 text-slate-700 text-center">
-            dan Sekolah adalah tempat anak-anak mendapatkan dukungan untuk
-            melengkapi pembelajarannya di sekolah
-          </p>
-          <button
-            class="md:mx-0 bg-[#362FD9] text-white w-24 h-10 lg:w-[147px] lg:h-[48px] mt-6 md:mt-8 rounded-full shadow-xl"
-          >
-            <a class="text-xs lg:text-sm" href="">Video</a>
-          </button>
+            <button
+              id="mobile-menu-button"
+              class="text-white focus:outline-none hover:bg-none hover:border-white"
+            >
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <aside
+      id="mobile-menu"
+      class="w-full h-screen bg-slate-700 bg-opacity-80 z-50 fixed md:hidden transition-all duration-200 ease-in-out translate-x-full"
+    >
+      <div class="w-full h-16 relative mb-4">
+        <button onclick="closeNavbar()">
+          <svg
+            class="absolute right-0 mr-4"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+        <a
+          href="#"
+          class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+          >Tour</a
+        >
+        <a
+          href="#"
+          class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+          >Destination</a
+        >
+        <a
+          href="#"
+          class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+          >Activities</a
+        >
+        <a
+          href="#"
+          class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+          >Pages</a
+        >
+        <a
+          href="#"
+          class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+          >Contact</a
+        >
+        <a
+          href="#"
+          class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+          >USD</a
+        >
+        <a
+          href="#"
+          class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-400 duration-200"
+          >Sign up</a
+        >
+        <button
+          href="#"
+          class="bg-white ring-1 ring-slate-400 text-gray-800 text-sm px-4 py-2 rounded-full hover:bg-transparent duration-200 hover:ring-white hover:text-white"
+        >
+          Log in
+        </button>
+      </div>
+    </aside>
+
+    <section class="relative" style="height: 500px">
+      <div
+        class="absolute top-0 w-full h-full bg-center bg-cover"
+        style="background-image: url('/img/profile.png')"
+      ></div>
+      <div
+        class="bottom-0 left-0 right-0 w-full absolute"
+        style="height: 70px"
+      ></div>
+    </section>
+    <section class="relative py-16 bg-slate-200">
+      <div class="container mx-auto px-4">
+        <div
+          class="relative flex flex-col bg-white w-full mb-6 shadow-xl rounded-lg -mt-64"
+        >
+          <div class="px-6">
+            <div class="flex flex-wrap justify-center">
+              <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+                <div class="relative">
+                  <img
+                    alt="..."
+                    src="/img/LOGO.jpg"
+                    class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
+                    style="max-width: 150px"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-center py-4 lg:pt-4 pt-8 mt-32 mx-auto">
+              <div
+                class="mr-4 p-3 w-full h-full text-center bg-[#1B5BDF] rounded-full"
+              >
+                <span class="text-xl md:text-4xl font-bold block text-white"
+                  >60+</span
+                ><span class="text-lg text-white font-light md:font-medium"
+                  >Santri
+                </span>
+              </div>
+              <div
+                class="mr-4 p-3 w-full h-full text-center bg-[#1B5BDF] rounded-full"
+              >
+                <span class="text-xl md:text-4xl font-bold block text-white"
+                  >10+</span
+                ><span class="text-lg text-white font-light md:font-medium"
+                  >Mapel</span
+                >
+              </div>
+              <div
+                class="mr-4 p-3 w-full h-full text-center bg-[#1B5BDF] rounded-full"
+              >
+                <span class="text-xl md:text-4xl font-bold block text-white"
+                  >6+</span
+                ><span class="text-lg text-white font-light md:font-medium"
+                  >Jurusan</span
+                >
+              </div>
+              <div
+                class="mr-4 p-3 w-full h-full text-center bg-[#1B5BDF] rounded-full"
+              >
+                <span class="text-xl md:text-4xl font-bold block text-white"
+                  >13</span
+                ><span class="text-lg text-white font-light md:font-medium"
+                  >Alumni</span
+                >
+              </div>
+            </div>
+            <div class="text-center mt-12">
+              <h3
+                class="text-4xl font-semibold leading-normal mb-2 text-slate-700"
+              >
+                SMA IT HSI-IDN
+              </h3>
+              <div class="text-sm mt-0 mb-2 text-slate-400 font-bold">
+                <p class="mr-2 text-lg text-slate-400"></p>
+                Purworejo, Jawa Tengah
+              </div>
+              <div class="mb-2 text-slate-600 mt-10">
+                <p class="mr-2 text-slate-400 text-xl font-bold"></p>
+                Jago IT Pinter Ngaji
+              </div>
+              <div class="mb-2 text-slate-600">
+                <p class="mr-2 text-lg text-slate-400"></p>
+                Part of IDN Boarding School
+              </div>
+            </div>
+            <div class="mt-10 py-10 border-t border-slate-200 text-center">
+              <div class="flex flex-wrap justify-center">
+                <div class="w-full lg:w-9/12 px-4">
+                  <p class="mb-4 text-lg md:text-2xl text-slate-700">
+                    sekolah adalah tempat mencetak penerus bangsa yang
+                    berkualitas dan berprestasi di segala bidang yang dapat
+                    bersaing di dunia internasional <br /><br />
+                    dan Sekolah adalah tempat anak-anak mendapatkan dukungan
+                    untuk melengkapi pembelajarannya di sekolah
+                  </p>
+                  <a href="#" class="font-normal text-[#1B5BDF]"
+                    >view more details</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-8 bg-gray-800 text-white">
+      <div
+        class="container mx-auto flex flex-col sm:flex-row justify-between items-center"
+      >
+        <p>&copy; 2024 Travel Agency. All rights reserved.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-white">Facebook</a>
+          <a href="#" class="text-white">Twitter</a>
+          <a href="#" class="text-white">Instagram</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // navbar scroll
+      // Pilih navbar
+      var navbar = document.querySelector("nav");
+
+      // Fungsi untuk mengubah background navbar saat di-scroll
+      function animasiscroll() {
+        if (window.scrollY > 0) {
+          navbar.classList.add("bg-[#1B5BDF]", "shadow-md", "navbar-bg");
+          navbar.classList.remove("bg-transparent");
+        } else {
+          navbar.classList.add("bg-transparent");
+          navbar.classList.remove("bg-[#1B5BDF]", "shadow-md", "navbar-bg");
+        }
+      }
+
+      // Tambahkan event listener untuk scroll
+      window.addEventListener("scroll", animasiscroll);
+
+      const sidebar = document.querySelector("aside");
+
+      function openNavbar() {
+        sidebar.classList.add("translate-x-0");
+        sidebar.classList.remove("translate-x-full");
+      }
+      function closeNavbar() {
+        sidebar.classList.remove("translate-x-0");
+        sidebar.classList.add("translate-x-full");
+      }
+    </script>
   </body>
 </html>
